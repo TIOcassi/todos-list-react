@@ -1,8 +1,24 @@
-# Task list
+# Task List React
 
-Description
+![Krystian](images/image8.png)
+
+## Demo
+https://tiocassi.github.io/todos-list-react/
+
+## Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies
+
+- React
+- Flex
+- Grid
+- BEM
+- HTML
+- CSS
+- JavaScript
+- ES 6 Features
 
 ## Available Scripts
 
