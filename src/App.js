@@ -23,15 +23,13 @@ function App() {
 
       <Section title="Dodaj nowe zadanie" body={<Form />} />
 
-      <Section title="Lista zadań" body={
-        <Tasks
-          tasks={tasks}
-          hideDone={hideDone} />}
+      <Section title="Lista zadań" body={<Tasks tasks={tasks} hideDone={hideDone} />}
         extraHeaderContent={
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
-            toggleHideDone={toggleHideDone} />
+            togglehideDone={toggleHideDone}
+          />
         }
       />
     </Container>
