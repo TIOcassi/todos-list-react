@@ -8,8 +8,6 @@ import Container from "./Container";
 
 const tasks = [];
 
-const hideDone = false;
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
 
