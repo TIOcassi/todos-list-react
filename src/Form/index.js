@@ -11,11 +11,11 @@ const Form = ({ addNewTask }) => {
 
         if (!trimmedNewTaskContent) {
             return;
-        }
+        };
 
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
-    }
+    };
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
