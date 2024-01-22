@@ -6,11 +6,14 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasks = [];
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
+
+  const localStorage = localStorage.getItem("tasks");
+
+  const [tasks, setTasks] = useState(
+    localStorage ? JSON.parse(localStorage) : 
+    [
     { id: 1, content: "przejść na Reacta", done: false },
     { id: 2, content: "zjeść pierogi", done: true },
   ]);
@@ -48,12 +51,12 @@ function App() {
     setTasks(tasks => [
       ...tasks,
       {
-        content,
+        content: content,
         done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      }
+        id: tasks.length === 0 ? tasks[tasks.length - 1].id + 1 : 1,
+      },
     ]);
-  }
+  };
 
   return (
     <Container>
