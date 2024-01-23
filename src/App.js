@@ -9,7 +9,7 @@ import Container from "./Container";
 function App() {
   const [hideDone, setHideDone] = useState(false);
 
-  const localStorage = localStorage.getItem("tasks");
+  localStorage = localStorage.getItem("tasks");
 
   const [tasks, setTasks] = useState(
     localStorage ? JSON.parse(localStorage) : 
