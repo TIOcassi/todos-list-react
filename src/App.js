@@ -11,13 +11,8 @@ function App() {
 
   const tasksLocalStorage = localStorage.getItem("tasks");
 
-  const [tasks, setTasks] = useState(
-    tasksLocalStorage ? JSON.parse(tasksLocalStorage) : 
-    [
-    { id: 1, content: "przejść na Reacta", done: false },
-    { id: 2, content: "zjeść pierogi", done: true },
-  ]);
-
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) 
+  || tasksLocalStorage);
   const storage = () => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }
@@ -53,7 +48,7 @@ function App() {
       {
         content: content,
         done: false,
-        id: tasks.length === 1 ? tasks[tasks.length - 1].id + 1 : 1,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       },
     ]);
   };
