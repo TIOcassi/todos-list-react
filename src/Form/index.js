@@ -20,7 +20,6 @@ const Form = ({ addNewTask }) => {
         <Document onSubmit={onFormSubmit}>
             <Input
                 value={newTaskContent}
-                className="form__input"
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
