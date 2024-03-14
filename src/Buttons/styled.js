@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Pushbutton = styled.div`
+export const StyledButtons = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
