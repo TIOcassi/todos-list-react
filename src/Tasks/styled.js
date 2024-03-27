@@ -12,7 +12,7 @@ export const Item = styled.li`
     grid-gap: 10px;
     padding: 10px;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
 
     ${({ hidden }) => hidden && css`
            display: none;   
@@ -27,21 +27,21 @@ text-decoration: line-through;
 
 export const Button = styled.button`
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     width: 30px;
     height: 30px;
     padding: 0;
     transition: background 0.3s;
 
     ${({ toggleDone }) => toggleDone && css`
-    background: hsl(120, 98%, 30%);
+    background: ${({ theme }) => theme.color.japaneseLaurel};
     &:hover {
         background: hsl(120, 98%, 35%);
     }
     `}
 
     ${({ remove }) => remove && css`
-    background: hsl(0, 80%, 50%);
+    background: ${({ theme }) => theme.color.crimson};
 
     &:hover {
         background: hsl(0, 80%, 55%);
